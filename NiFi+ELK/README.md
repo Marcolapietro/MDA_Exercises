@@ -26,7 +26,7 @@ And check everything is 'running' fine
 
 NiFi WorkFlow
 
-<img src="NiFi + ELK\images\Template NiFi.png" size=400px>
+<img src="images/Template NiFi.png" size=400px>
 
 | Processor | Usage |
 | --- | --- |
@@ -38,15 +38,15 @@ NiFi WorkFlow
 
 InvokeHTTP
 
-<img src="NiFi + ELK\images\Config1.png" size=250px>
+<img src="images/Config1.png" size=250px>
 
 SplitJson
 
-<img src="NiFi + ELK\images\Config2.png" size=250px>
+<img src="images/Config2.png" size=250px>
 
 PutElasticsearchHTTP
 
-<img src="NiFi + ELK\images\Config3.png" size=250px>
+<img src="images/Config3.png" size=250px>
 
 
 
