@@ -54,6 +54,20 @@ PutElasticsearchHTTP
 
 Check the flowfile from NiFi to Elastic it's OK and it's uploading docs on 'nycrimes' [Kibana (localhost:5601) -> Management -> Index Management]
 
+<img src="images/Index Management.png" size=250px>
 
+After that, create a new index through [Reindex API](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html) and create a new index pattern
+
+<img src="images/ElasticSearch SQL.png" size=250px>
+
+
+
+#### 4th
+
+Create a 'Coordinate Map' on 'Visualizations' and play around the different options!
+
+<img src="images/NYMapLegend.png" size=250px>
+
+<img src="images/HeatMap.png" size=250px>
 
 
