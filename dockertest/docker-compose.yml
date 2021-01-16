@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+
+  # Elasticsearch: Data Storage and Search Engine
+  elasticsearch:
+    image: 'elasticsearch:7.3.0'
+    hostname: elasticsearch
+    container_name: elasticsearch
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    environment:
+      - discovery.type=single-node
+
+
+  # Kibana: Elasticsearch Dashboarding
+  kibana:
+    image: 'kibana:7.3.0'
+    hostname: kibana
+    container_name: kibana
+    ports:
+      - '5601:5601'
+    environment:
+      - elasticsearch.hosts=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+
+
+  nifi:
+    image: apache/nifi:latest
+    container_name: nifi
+    restart: always
+    volumes:
+      - ./nifi/:/home/nifi/
+    ports:
+      - 8080:8080
+    
+  nifi-registry:
+    image: apache/nifi-registry:latest
+    container_name: nifiregistry
+    restart: always
+    ports:
+      - 18080:18080
+
